@@ -8,6 +8,7 @@ SETUP
 /* 
 *  Responsive Site Configurations  (_configuration.scss)
 * */
+* 
   //Max page width
   $_getPageWidth: 1140px;              
   
