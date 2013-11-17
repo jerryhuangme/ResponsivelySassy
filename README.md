@@ -21,7 +21,7 @@ SETUP
   
   //Column gutter width in pixels
 *  $_getGutter: 25px;
-  
-DEMO
+
+Demo
 =================
 http://jerryhuang.me
