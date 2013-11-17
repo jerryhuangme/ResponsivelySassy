@@ -5,24 +5,22 @@ ResponsivelySassy
 
 
 SETUP
-/* 
 *  Responsive Site Configurations  (_configuration.scss)
-* */
 
   //Max page width
-  $_getPageWidth: 1140px;              
+*  $_getPageWidth: 1140px;              
   
   //Base font in pixels
-  $_getFontSize: 16px;             
+*  $_getFontSize: 16px;             
   
   //Column class name
-  $_getClassName: '_setcol';     
+*  $_getClassName: '_setcol';     
   
   //Number of columns
-  $_getMaxCols: 5;                
+*  $_getMaxCols: 5;                
   
   //Column gutter width in pixels
-  $_getGutter: 25px;
+*  $_getGutter: 25px;
   
   DEMO
 =================
