@@ -1,0 +1,114 @@
+/* 
+ * Author: Jerry Huang  
+ * Credits: Losely based on: https://github.com/jonikorpi/Frameless/blob/master/frameless.html
+ * */
+
+
+
+
+//////////////// Global configurations --->    HTML
+@include _setHTML($_getFontSize);
+
+////////////////////////////////// Executables //////////////////////////////////   
+////////////////////////////////// RUN --->    Device: Default view   
+@include makeResponsive($_getMaxCols, 'web');
+
+////////////////////////////////// RUN --->    Device: Phone
+@media only screen and (min-width: 1px) and (max-width: 1139px){
+     /*
+     * Catch all
+     */   
+  
+  @include makeResponsive($_getMaxCols, 'phone');   
+  @include _setHTML($_getFontSize+.5); 
+  body{
+    @if $isDEVmode{
+      color: pink;
+    }
+  } 
+}  
+
+////////////////////////////////// RUN --->    Device: Phone
+@media only screen and (min-width: 320px){  
+    /*
+     * iPhone 3gs - portrait
+     * HTC EVO 3D, Ice cream sandwhich - portrait 
+     * Sansung Galaxy S - portrait
+     * Galaxy Nexus - portrait
+     */   
+  @include makeResponsive($_getMaxCols, 'phone');   
+  @include _setHTML($_getFontSize+.6);
+  body{
+    @if $isDEVmode{    
+      color: orange; 
+    }
+  }  
+}
+
+
+
+////////////////////////////////// RUN --->    Device: Phone landscape
+@media only screen and (min-width: 440px) {
+  @include _setHTML($_getFontSize+.5);
+  @include makeResponsive($_getMaxCols, 'phone');  
+  body{
+    @if $isDEVmode{    
+    color: green;
+    }
+  }
+ 
+}
+
+
+////////////////////////////////// RUN --->    Device: Droid landscape
+@media only screen and (min-width: 570px) {
+  @include _setHTML($_getFontSize+.5);
+  @include makeResponsive($_getMaxCols, 'phone');  
+  body{
+    @if $isDEVmode{
+    color: purple;
+    }
+  }
+
+
+}
+
+////////////////////////////////// RUN --->    Device: Tablet Portrait
+@media only screen and (min-width: 750px) {
+  @include _setHTML($_getFontSize+.25);
+  @include makeResponsive($_getMaxCols, 'tablet');    
+  body{
+    @if $isDEVmode{    
+    color: yellow;
+    }
+  }
+
+}
+ 
+////////////////////////////////// RUN --->    Device: Tablet - landscape
+@media only screen and (min-width: 900px) {
+  @include _setHTML($_getFontSize+.25);
+  @include makeResponsive($_getMaxCols, 'tablet');  
+  body{
+    @if $isDEVmode{    
+    color: blue;
+    }
+  }
+
+}
+
+/////////////////////////////// RUN --->    Device: Default view
+@media only screen and (min-width: 1139px) {
+  @include _setHTML($_getFontSize);
+  @include makeResponsive($_getMaxCols, 'web');  
+  body{
+    color: rgb(20,20,20);
+  }  
+}
+
+
+/** Kindle Fire Landscape **/
+@media only screen and (min-device-width : 600px) and (max-device-width: 1280px) {
+}
+
+

@@ -1,0 +1,138 @@
+/* 
+* 
+*  Responsive Site Configurations    
+* 
+* */
+  $_getPageWidth: 1140px;              //Max page width
+
+  $_getFontSize: 16px;             //Base font in pixels
+
+  $_getClassName: '_setcol';     //Column class name
+
+  $_getMaxCols: 5;                //Number of columns
+
+  $_getGutter: 25px;              //Column gutter width in pixels
+  
+  ////////////////  Turn on DEV mode (shows text colors at each break point)
+  $isDEVmode: false; //Set TRUE to show all color at break points
+
+  // SASS short hand
+  $em: $_getFontSize / 1em;  // Shorthand for outputting ems
+
+
+
+
+ /* 
+  * 
+  *  Style Configurations    
+  * 
+  * */
+ 
+  //DOM
+  $_setAlinkcolor: rgb(0, 105, 146);
+  
+  $_setAlinkHovercolor: rgb(98,194,229);
+  
+  $_setContentmMinHeight: 475px;
+   
+  $_setFontSize: 93%;
+ 
+  $_setMarginAuto: 0px auto;
+   
+  $_setSectionHeight: 400px;
+
+  $_setPageShadow: 0px 0px 80px rgba(0,0,0,0.3);
+
+  $_setPageNavHeight: 31px;
+  
+  $_setFontHeaderTitle: "Baskerville", Baskerville, "Times New Roman",Times,serif;
+  
+  $_setFontSubHeaderTitle: Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  
+  $_setDefaultFont: Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
+  $_setContentTitleColor: rgb(0, 64, 80);
+  
+  $_setContentTitleMargin: -10px;
+     
+  $_setColorWhite: rgb(255,255,255);
+  
+  $_setHeaderHeight: 108px;
+  
+  $_setT3width: 175px;
+  
+  $_setDeskTopNavPanel: 0px 0px 90px rgba(0,0,0,0.7);
+  
+  // $_setT3MenuNavPanel: 0px 0px 90px rgba(0,0,0,0.7);  
+  
+ /* 
+  * 
+  *  Mobile Configurations    
+  * 
+  * */
+  $_setMobilePanelHeight: 82px;   
+/* 
+* 
+*  Tools    
+* 
+* */
+  @mixin alertBox{
+    border: 1px solid red;
+  }
+
+ 
+/*
+ * Mixins
+ * 
+ * */
+@mixin pageShadow{
+    -moz-box-shadow: $_setPageShadow;
+    -webkit-box-shadow: $_setPageShadow;
+    box-shadow: $_setPageShadow;
+}
+
+@mixin nukePadMar{
+    padding: 0px;
+    margin: 0px;
+}
+
+//Headers
+@mixin _setContentH1{
+    color: darken( $_setContentTitleColor, 5% );
+    //margin-bottom:  $_setContentTitleMargin;
+    font-size: 1.3em;
+}
+
+@mixin _setContentH2{
+    color: $_setContentTitleColor;
+    //margin-bottom:  $_setContentTitleMargin;
+    font-size: 1.17em;
+}
+
+@mixin _setContentH3{
+    color: lighten( $_setContentTitleColor, 10% );
+    //margin-bottom:  $_setContentTitleMargin;
+    font-size: 1.13em;
+}
+
+@mixin _setContentH4{
+    color: lighten( $_setContentTitleColor, 10% );
+    //margin-bottom:  $_setContentTitleMargin;
+    font-size: 0.95em;
+}
+
+//Gradients
+@mixin _gradient_grey{
+background: #dbdbdb; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijg5JSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+background: -moz-linear-gradient(top,  #dbdbdb 0%, #f4f4f4 89%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(89%,#f4f4f4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #dbdbdb 0%,#f4f4f4 89%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #dbdbdb 0%,#f4f4f4 89%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #dbdbdb 0%,#f4f4f4 89%); /* IE10+ */
+background: linear-gradient(to bottom,  #dbdbdb 0%,#f4f4f4 89%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#f4f4f4',GradientType=0 ); /* IE6-8 */
+
+
+}
